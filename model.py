@@ -13,7 +13,7 @@ feat_cols = ['Distance','Haversine','Phour','Pmin','Dhour','Dmin','Temp',
 xgb_final = joblib.load(curr_path + "/final_model_best.joblib")
 
 print(xgb_final)
-def predict_duration(attributes: nd.ndarray):
+def predict_duration(attributes: np.ndarray):
     '''Returns Biker Trip Duration value'''
     pred = xgb_final.predict(attributes)
     print("Duration predicted")
